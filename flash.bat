@@ -39,9 +39,11 @@ if %errorlevel% neq 0 (
     echo.
     echo Error flashing the device. Please check the connection and try again.
     echo ................................................
+    echo Press any key to retry
     echo. 
     pause
-    goto :EOF
+    :: goto :EOF
+    goto flashLoop
 ) else (  
     echo Flashing successful!!!!  
     echo ===========================================
